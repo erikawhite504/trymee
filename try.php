@@ -3,7 +3,7 @@
 <head>
   <title>WEATHER UPDATE</title>
 
-<script src="http://code.jquery.com/jquery-3.2.1.min.js"
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
 intefrity="sha256-hwg4gsxgFZhOsEEamdOVGBf13fyQuiTwlAQgxVSNgta="
 crossorigin="anonymous"></script>
 </head>
