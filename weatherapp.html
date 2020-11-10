@@ -13,7 +13,7 @@
 }
 
 body{
-  font-family: "Arial",sans-serif;
+  font-family: "Nunito",sans-serif;
   background-image: url('bgw.jpg');
   background-size: cover;
 }
@@ -26,29 +26,30 @@ body{
 input[type="submit"]{
   padding: 15px 30px;
   background: #01A9DB;
-  border: none;
-  border-radius: 1px;
+  border-radius: 7px;
   font-family: "Arial",sans-serif;
   font-size: 15px;
 }
 
 .input input[type="text"]{
-  width: 500px;
+  width: 600px;
   padding: 15px 30px;
   background: #e7e7e7;
+  opacity:1.0;
   border: none;
-  border-radius: 1px;
+  border-radius: 7px;
   font-family: "Arial",sans-serif;
   font-size: 15px;
-
+}
 
 .card{
   width: 40%;
   background: #e7e7e7;
-  height: 40vh;
+  opacity: 0.7;
+  height: auto;
   margin: 50px auto;
-  border-radius: 2px;
-  align-content: center;
+  padding: 1px;
+  border-radius: 9px;
 }
 
 
@@ -62,84 +63,14 @@ input[type="submit"]{
 .card h1{
   padding: 5px 0;
   text-align: center;
+  font-family: "Lucida Bright", sans-serif;
 }
 
 .card p{
   text-align: center;
   margin:50px 0;
   font-size:20px;
-}
-
-</style><!DOCTYPE html>
-<head>
-  
-  <title>Weather Api</title>
- 
-</head>
-
-<style>
-  *{
-  margin:0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body{
-  font-family: "Arial",sans-serif;
-  background-image: url('bgw.jpg');
-  background-size: cover;
-}
-
-.input{
-  text-align: center;
-  margin: 100px auto;
-}
-
-input[type="submit"]{
-  padding: 15px 30px;
-  background: #01A9DB;
-  border: none;
-  border-radius: 1px;
-  font-family: "Arial",sans-serif;
-  font-size: 15px;
-}
-
-.input input[type="text"]{
-  width: 500px;
-  padding: 15px 30px;
-  background: #e7e7e7;
-  border: none;
-  border-radius: 1px;
-  font-family: "Arial",sans-serif;
-  font-size: 15px;
-
-
-.card{
-  width: 40%;
-  background: #e7e7e7;
-  height: 40vh;
-  margin: 50px auto;
-  border-radius: 2px;
-  align-content: center;
-}
-
-
-.close{
-  float: right;
-  margin-top: -2px;
-  cursor: pointer;
-  margin-right: 20px;
-}
-
-.card h1{
-  padding: 5px 0;
-  text-align: center;
-}
-
-.card p{
-  text-align: center;
-  margin:50px 0;
-  font-size:20px;
+  font-family: "Copperplate", serif;
 }
 
 </style>
@@ -153,7 +84,7 @@ input[type="submit"]{
   
     <div class="input">
       <input type="text" placeholder="Enter the city" class="input_text">
-      <input type="submit" value="GET WEATHER" class="submit">
+      <input type="submit" value="Get Weather" class="submit">
     </div>
   </div>
 
@@ -185,8 +116,8 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&appid=8
   var descValue = data['weather'][0]['description'];
 
   main.innerHTML = nameValue;
-  desc.innerHTML = "Weather Description: "+descValue;
-  temp.innerHTML = "Temperature: "+tempValue+"°C";
+  desc.innerHTML = "<b>Weather Description</b> "+"<br><br>"+descValue;
+  temp.innerHTML = "<b>Temperature</b>"+"<br><br>"+tempValue;
   input.value ="";
 
 })
